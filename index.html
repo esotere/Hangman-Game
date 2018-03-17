@@ -1,18 +1,217 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hangman Game</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <script type="text/javascript" src=".assets/javascript/game.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Hangman Game</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<!-- <script type="text/javascript" src="./assets/javascript/game.js"></script> --> <!-- <== at the top causes uncaught error  -->
 </head>
 <body>
-<h1></h1>
-<p>
-  
-</p>
+	<div class="wrapper" >
+		<div class="header">	
+			<header>
+				<div>
+					<!-- <p><h1> Hang Man</h1></p> -->
+					<h1>Welcome To My Rendition Of Hangman.</h1>	
+				</div>			
+			</header>
+		</div>
+
+		<div class="inner-boxed-left">
+			<div class="container">
+				<div id="slideShowImages">
+					<!-- <p>images go here</p> -->
+					<div>
+						<img src="./assets/images/lioness_moving_cub.jpg" alt="slide-1">
+					</div>
+					<div>
+						<img src="./assets/images/wild-dogs.jpg" alt="slide-2">
+					</div>
+					<div>
+						<img src="./assets/images/lion_pride.jpg" alt="slide-3">
+					</div>
+					<div>
+						<img src="./assets/images/giraffe.jpg" alt="slide-4">
+					</div>
+					<div>
+						<img src="./assets/images/animals-art.jpg" alt="slide-5">
+					</div>
+					<div>
+						<img src="./assets/images/animals.jpg" alt="slide-6">
+					</div>
+					<div>
+						<img src="./assets/images/elephant.jpg" alt="slide-7">
+					</div>			
+					<div>
+						<img src="./assets/images/hippopotamus.jpg" alt="slide-8">
+					</div>								
+				</div>
+				
+			</div>
+			<div>
+				<!-- <button id="buttons">Start</button>  -->
+				<button id="reset">reset</button>
+			</div>
+		</div>
+
+
+		<div class="inner-boxed-right">
+			<div class="">					
+				<div>
+					<p class="guessesRemaining"><strong>Remaining Number Of Guesses:  
+					</strong><span id=guessesRemainingSpan>0</span>	</p>
+
+					<p class="word"><strong>Word:  
+					</strong><span id=wordSpan>0</span></p>
+
+					<p class="matchedLetter"><strong>Matches:  
+					</strong><span id=matchedLetterSpan>0</span></p>
+
+
+					<p class="guessesMade"><strong>Guesses Made:  
+					</strong><span id=guessesMadeSpan>0</span></p>
+				</div>
+
+
+
+				<div>
+					<p class="output"><strong>Output:
+					</strong></p>
+					<p class="wins"><strong> Wins: 
+					</strong><span id=winsSpan>0</span></p>
+					<p class="Losses"><strong>Losses:
+					</strong><span id=lossesSpan>0</span></p>
+					<p><strong>Stats: </strong><span id=statSpan>0</span></p>
+					<p><strong>Stats: </strong><span id=outputSpan>0</span></p>
+					<!-- <p><span id=correctSpan>0</span></p> -->   
+					<!--<span id=outputSpan>0</span> --> 
+					<!-- </p> --> 
+				</div>						
+			</div>
+			
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script type="text/javascript" src="./assets/javascript/game.js">
+
+	</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+
+		<div>
+			<div>	
+				<header>
+					<h1>Welcome To My Version Of Hangman.</h1>
+					<p>
+
+					</p>
+				</header>
+			</div>
+
+			<div>	
+				<main class="wrapper">
+					<div class="inner-boxed-left">
+						<div id="images">
+							<! <p>images go here</p> -->
+						<!-- <img src="./assets/images/lioness_moving_cub.jpg" alt="slide-1">
+						<img src="./assets/images/Koala.jpg" alt="slide-2">
+						<img src="./assets/images/lion_pride.jpg" alt="slide-3">
+						<img src="./assets/images/space-3.jpg" alt="slide-4">
+						<img src="./assets/images/lagos_skline.jpg" alt="slide-5">
+						<img src="./assets/images/Desert.jpg" alt="slide-6"> -->
+					<!-- </div>
+				</div>
+
+				<div class="inner-boxed-right">
+					<div class="">
+						
+						<div id="hangman">
+
+							
+
+							<div id="guessesLeft">
+
+							</div>
+						</div>
+
+
+						<div class="wrapper">
+
+							<div id="letters">
+								<ul id="letters"></ul>
+
+								<div id="Stats">
+									<p>Stats</p>
+									<p id="stat"></p>
+									<p id="lives" ></p>
+									<p id="mylives"></p>
+								</div>
+
+							</div>
+
+							<div id="output">
+								<p id="output" class="output"></p>
+
+
+
+
+
+
+
+								<div id="Bank">
+
+								</div>
+
+
+							</div>
+							<div>
+								<button id="buttons">Start</button> 
+								<button id="reset">reset</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<! <div class="bottom">
+				</div> -->
+			<!-- </main>
+		</div>
+		<footer>
+		</footer>
+	</div>
+</body>
+</html> -->
+
